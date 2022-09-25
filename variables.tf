@@ -27,11 +27,35 @@ variable "project_name" {
 variable "region" {
   type        = string
   description = "Azure Region that will be used"
-  default     = "West US"
+  default     = "West Europe"
 }
  
 variable "cluster_version" {
   type        = string
   description = "The Kubernetes version for our clusters"
-  default     = "1.21.2"
+  default     = "1.23.8"
+}
+
+variable "customer" {
+  type = object({
+    long  = string
+    short = string
+  })
+}
+
+variable "location" {
+  type = object({
+    main  = string
+    short = string
+  })
+}
+
+variable "tags" {
+  type        = map(string)
+  description = "Tags used for the deployment."
+  default = {
+    "source"   = ""
+    "solution" = ""
+    "provider" = ""
+  }
 }
