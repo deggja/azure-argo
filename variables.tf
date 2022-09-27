@@ -33,7 +33,7 @@ variable "region" {
 variable "cluster_version" {
   type        = string
   description = "The Kubernetes version for our clusters"
-  default     = "1.23.8"
+  default     = "1.24.3"
 }
 
 variable "customer" {
