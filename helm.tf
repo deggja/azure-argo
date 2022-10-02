@@ -13,3 +13,4 @@ resource "helm_release" "argocd" {
   namespace  = "argocd"
   version    = "3.33.6"
   values = [file("values.yaml")]
+}
