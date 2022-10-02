@@ -21,7 +21,7 @@ variable "subscription_id" {
 variable "project_name" {
   type        = string
   description = "Globally used project name"
-  default     = "aks-in-action"
+  default     = "aks-baseline"
 }
  
 variable "region" {
